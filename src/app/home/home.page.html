@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>
+      Gestión de proyectos!
+    </ion-title>
+    <ion-buttons  slot="end">
+      <ion-button class="botonLogo">
+      <img src="../assets/logo2.png">
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-searchbar mode="ios" style="margin-top:-8px" animated="true" [(ngModel)]="searchTerm"
+      (ionChange)="filterItems()" showCancelButton="focus"></ion-searchbar>
+      <!-- <ion-button [routerLink]="['/anyadir-proyecto']" size="medium" >Nuevo Proyecto</ion-button>-->
+      <ion-icon class="iconoCrearProyecto" name="add-circle-outline" [routerLink]="['/anyadir-proyecto']"></ion-icon>
+      <ion-buttons slot="end">
+        <ion-button (click)="botonActivados()" class="botonEncabezado"  *ngIf="mostrarActivos">Activos</ion-button>
+        <ion-button (click)="botonActivados()" class="botonEncabezado"  *ngIf="!mostrarActivos">No activos</ion-button>
+      </ion-buttons>
+    </ion-item>
+    </ion-list>
+
+
+  
+    <ion-list inset="true" mode="ios" style= "margin-top: -8px;">
+    <div *ngFor="let proyectos of proyectosFiltered; let i = index"> 
+    
+      <ion-item [routerLink]="['/detalles-proyecto', {id: proyectos.id}]" [color]="i%2 != 0 ? 'lightgrey' : 'light'">
+          <ion-col class="columnaRef" size="1">
+            Ref: {{proyectos.id}}
+          </ion-col>
+          <ion-col class="columnaTitulo" size="8">
+            {{proyectos.titulo}}
+          </ion-col>
+          <ion-col size="2">
+            Cliente {{proyectos.cliente}}
+          </ion-col>
+          <ion-col size="1">
+            {{proyectos.activo}}
+          </ion-col>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <!-- <ion-grid *ngFor="let proyecto of proyectosFiltered" [routerLink]="['/detalles-proyecto', {id: proyecto.id}]"> 
+    
+    <ion-row *ngIf="mostrarActivos === true ? proyecto.activo : !null">
+        <ion-col class="columnaRef" size="1">
+          Ref: {{proyecto.id}}
+        </ion-col>
+        <ion-col class="columnaTitulo" size="8">
+          {{proyecto.titulo}}
+        </ion-col>
+        <ion-col size="2">
+          Cliente {{proyecto.cliente}}
+        </ion-col>
+        <ion-col size="1">
+          {{proyecto.activo}}
+        </ion-col>
+    </ion-row>
+  </ion-grid>-->
+</ion-content>
+
+<!-- <ion-buttons slot="start">
+  <ion-back-button></ion-back-button>
+</ion-buttons> -->
+
+
+<!-- 
+      <ion-card-content>
+        <ion-card-title>En curso {{proyecto.activo}}</ion-card-title>
+      </ion-card-content>-->
+
+<!--    
+          <ion-item>
+        <ion-card-title>Comercial {{proyecto.comercial}}</ion-card-title>
+          </ion-item>
+      </ion-card-content>
+        <ion-card-content>
+        <ion-list *ngFor="let fase of proyecto.fases">
+          Fases {{fase}}
+        </ion-list>-->

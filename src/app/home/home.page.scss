@@ -1,0 +1,37 @@
+.columnaRef {
+  text-align: center;
+  font-family: "My Custom Font";
+}
+
+.columnaTitulo {
+  text-align: center;
+}
+.prueba{
+  height: 100%;
+  margin-top: 20px;
+}
+
+ion-header {
+  height: 100px;
+}
+ion-toolbar {
+  height: 100px;
+}
+.botonLogo{
+  height: 100px;
+}
+
+.botonEncabezado {
+  background-color: black;
+  fill:"solid";
+  margin-top: -8px;
+  width: 120px;
+  height: 34px;
+  color: white;
+  border-radius: 6px;
+}
+.iconoCrearProyecto {
+margin-left: 12px;
+margin-bottom: 6px ;
+margin-right: -2px;
+}

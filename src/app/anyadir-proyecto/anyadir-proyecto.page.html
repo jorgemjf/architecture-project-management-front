@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Detalles del Proyecto!</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="headerButton" (click)="addAlertConfirm()">Añadir proyecto</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none" class="listaProyecto">
+    <ion-item class="listaDetallesProyecto" id="referencia" color="gris">
+      <ion-label>Referencia</ion-label>
+      <ion-input type="text" class="lineaRef" [(ngModel)]="proyecto.referencia" required="true">
+      </ion-input>
+    </ion-item>
+    <ion-item id="titulo" class="listaDetallesProyecto">
+      <ion-label id="labelTitulo"><ion-icon name="document-text" class="alineacionCorrecta"></ion-icon>Nombre del proyecto</ion-label>
+      <ion-input type="text" [(ngModel)]="proyecto.titulo" required="true"></ion-input>
+    </ion-item>
+    <ion-item id="tipoProyecto" class="listaDetallesProyecto">
+      <ion-label ><ion-icon name="documents" class="alineacionCorrecta"></ion-icon>Tipo de Proyecto</ion-label>
+      <ion-input type="text" [(ngModel)]="proyecto.tipo" class="alineacionCorrecta" required="true"></ion-input>
+    </ion-item>
+    <ion-item id="zonificacion" class="listaDetallesProyecto">
+      <ion-label><ion-icon name="map-sharp" class="alineacionCorrecta"></ion-icon>Zonificación</ion-label>
+      <ion-input type="text" [(ngModel)]="proyecto.zonificacion" class="alineacionCorrecta" required="true"></ion-input>
+    </ion-item>
+    <ion-item id="catastro" class="listaDetallesProyecto">
+      <ion-label><ion-icon name="pricetag" class="alineacionCorrecta"></ion-icon>Ref. Catastral</ion-label>
+      <ion-input type="text" [(ngModel)]="proyecto.catastro" class="alineacionCorrecta" required="true"></ion-input>
+    </ion-item>
+
+    <!--cliente-->
+
+    <ion-item ion-item class="listaDetallesProyecto" id="cliente">
+      <ion-label>
+        <ion-icon name="person-sharp" class="alineacionCorrecta"></ion-icon>Cliente
+      </ion-label>
+      <ion-input type="text" class="alineacionCorrecta" [(ngModel)]="proyecto.cliente" required="true">
+      </ion-input>
+    </ion-item>
+    <ion-item ion-item class="listaDetallesProyecto" id="ubicacion">
+      <ion-label>
+        <ion-icon name="location-sharp" class="alineacionCorrecta"></ion-icon>Ubicación
+      </ion-label>
+      <ion-input type="text" class="alineacionCorrecta" [(ngModel)]="proyecto.ubicacion" required="true"></ion-input>
+    </ion-item>
+    <ion-item ion-item class="listaDetallesProyecto" id="comercial">
+      <ion-label>
+        <ion-icon name="briefcase" class="alineacionCorrecta"></ion-icon>Comercial
+      </ion-label>
+      <ion-input type="text" class="alineacionCorrecta" [(ngModel)]="proyecto.comercial" required="true"></ion-input>
+    </ion-item>
+    <ion-item ion-item class="listaDetallesProyecto" id="presupuesto">
+      <ion-label>
+        <ion-icon name="logo-usd" class="alineacionCorrecta"></ion-icon>Presupuesto
+      </ion-label>
+      <ion-input placeholder="0.00€" [(ngModel)]="proyecto.presupuesto" class="alineacionCorrecta" required="true"></ion-input> 
+    </ion-item>
+
+  </ion-list>
+</ion-content>

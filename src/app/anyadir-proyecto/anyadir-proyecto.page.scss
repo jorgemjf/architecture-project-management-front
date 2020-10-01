@@ -1,0 +1,88 @@
+ion-toolbar {
+  height: 100px;
+}
+
+.headerButton {
+  height: 100px;
+  margin-right: 20px;
+}
+
+.lineaRef {
+  font-family: "My Custom Font";
+  font-size: 1.2rem;
+}
+
+.listaProyecto {
+  margin-top: 80px;
+  margin-left: 500px;
+  margin-right: 500px;
+  border: 3px solid #555;
+  border-radius: 10px;
+}
+#referencia {
+  margin-top: -8px;
+}
+#titulo {
+    margin-top: 8px;
+}
+
+#tipoProyecto{
+    margin-top: 8px;
+}
+#zonificacion{
+    margin-top: 8px;
+}
+#catastro{
+    margin-top: 8px;
+}
+.alineacionCorrecta {
+  margin-bottom: -2px;
+  margin-right: 6px;
+  font-size: 1.2rem;
+}
+#cliente {
+  margin-bottom: 10px;
+  margin-top: 8px;
+}
+
+#ubicacion {
+  margin-bottom: 10px;
+}
+
+#localizacion {
+  margin-bottom: 10px;
+}
+
+#comercial {
+  margin-bottom: 10px;
+}
+
+#fases {
+  margin-bottom: 10px;
+}
+
+#presupuesto {
+  margin-bottom: 10px;
+}
+
+#estado {
+  margin-bottom: 10px;
+}
+
+.ion-color-gris {
+  --ion-color-base: var(--ion-color-gris);
+  --ion-color-base-rgb: var(--ion-color-gris-rgb);
+  --ion-color-contrast: var(--ion-color-gris-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-gris-contrast-rgb);
+  --ion-color-shade: var(--ion-color-gris-shade);
+  --ion-color-tint: var(--ion-color-gris-tint);
+}
+
+.ion-color-new {
+  --ion-color-base: var(--ion-color-new);
+  --ion-color-base-rgb: var(--ion-color-new-rgb);
+  --ion-color-contrast: var(--ion-color-new-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-new-contrast-rgb);
+  --ion-color-shade: var(--ion-color-new-shade);
+  --ion-color-tint: var(--ion-color-new-tint);
+}
